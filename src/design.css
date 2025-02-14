@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Jeju+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+
+
+body{
+    font-family: Arial, Montserrat;
+    background: hsla(189, 87%, 6%, 1);
+
+    background: linear-gradient(315deg, hsla(189, 87%, 6%, 1) 0%, hsla(188, 68%, 19%, 1) 100%);
+    
+    background: -moz-linear-gradient(315deg, hsla(189, 87%, 6%, 1) 0%, hsla(188, 68%, 19%, 1) 100%);
+    
+    background: -webkit-linear-gradient(315deg, hsla(189, 87%, 6%, 1) 0%, hsla(188, 68%, 19%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#02191D", endColorstr="#0F4750", GradientType=1 );}
+
+    #sec-1{
+        background: hsla(189, 87%, 6%, 1);
+
+        background: linear-gradient(315deg, hsla(189, 87%, 6%, 1) 0%, hsla(188, 68%, 19%, 1) 26%);
+        
+        background: -moz-linear-gradient(315deg, hsla(189, 87%, 6%, 1) 0%, hsla(188, 68%, 19%, 1) 26%);
+        
+        background: -webkit-linear-gradient(315deg, hsla(189, 87%, 6%, 1) 0%, hsla(188, 68%, 19%, 1) 26%);
+        
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#02191D", endColorstr="#0F4750", GradientType=1 );}
