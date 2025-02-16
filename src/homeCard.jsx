@@ -13,7 +13,7 @@ function HomeCard() {
 const handleNext = () => {
   const ticketData = {
     ticketType: selected,
-    numOfTickets: ticket
+    numberOfTickets: ticket
   };
      localStorage.setItem('ticketData', JSON.stringify(ticketData));
   navigate("/attendeeForm");
@@ -115,12 +115,9 @@ const handleNext = () => {
             onChange={handleTicketNum}
             className="mx-auto w-[90%] p-3 rounded-lg bg-[#02191D] border border-solid border-[#197686]"
           >
-           <option value='1'>1</option>
-            <option value='2'>2</option>
-             <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5'>5</option> 
-            <option value='6'>6</option>
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <option key={num} value={num}>{num}</option>
+            ))}
           </select>
         </div>
 
