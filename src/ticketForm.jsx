@@ -296,11 +296,11 @@ const handleBook = () => {
             </div>
             <div class="self-stretch h-12 justify-end items-end gap-6 inline-flex">
                 <div class="grow shrink basis-0 h-12 px-6 py-3 rounded-lg border border-[#23a0b5] justify-center items-center gap-2 flex overflow-hidden">
-                    <div class="text-[#23a0b5] text-base font-normal font-['JejuMyeongjo'] leading-normal"
-                    onClick={handleBook}>Book Another Ticket</div>
+                    <button class="text-[#23a0b5] text-base font-normal font-['JejuMyeongjo'] leading-normal"
+                    onClick={handleBook}>Book Another Ticket</button>
                 </div>
                 <div class="grow shrink basis-0 h-12 px-6 py-3 bg-[#23a0b5] rounded-lg justify-center items-center gap-2 flex overflow-hidden">
-                    <div class="text-neutral-50 text-base font-normal font-['JejuMyeongjo'] leading-normal">Download Ticket</div>
+                    <button class="text-neutral-50 text-base font-normal font-['JejuMyeongjo'] leading-normal">Download Ticket</button>
                 </div>
             </div>
         </div>
