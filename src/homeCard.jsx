@@ -6,7 +6,7 @@ import './styles.css';
 import { useNavigate } from 'react-router-dom';
 
 function HomeCard() {
-  const [selected, setSelected] = useState('regular');
+  const [selected, setSelected] = useState('Regular');
   const [ticket, setTicket] = useState(1);
   const navigate = useNavigate();
 
@@ -30,7 +30,10 @@ const handleNext = () => {
     <>
     <div className="flex justify-center mt-7 text-white">
       <div class="p-2 m-2 rounded-3xl h-[650px] w-[400px] md:w-[600px] border border-[#0e464f] bg-[#07363e]">
-      <div class="text-white text-[32px] font-normal font-['JejuMyeongjo'] pl-4">Ticket Selection</div>
+<div className='flex justify-between'>
+      <p class="text-white text-[32px] font-normal font-['JejuMyeongjo'] pl-4">Ticket Selection</p>
+<p className='pt-3 pr-3 text-lg'>1/3</p>
+      </div>
       <div>
       <svg className='mx-auto m-4 w-[360px] md:w-[550px]' width="550" height="4" viewBox="0 0 604 4" fill="none" xmlns="http://www.w3.org/2000/svg">
   <g clip-path="url(#clip0_5_2229)">
@@ -122,13 +125,13 @@ const handleNext = () => {
         </div>
 
       
-        <div className="flex pb-7 flex-col md:flex-row justify-around my-6">
-          <button className=" w-[90%] mx-auto md:w-[100%] py-2 rounded-md border border-solid border-[#197686] mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-around my-3">
+          <button className="w-[90%] mx-auto md:w-auto px-20 py-3 md:px-24 rounded-md border border-solid border-[#197686]">
             Cancel
           </button>
           <button 
                onClick={handleNext}
-          className="bg-[#197686] rounded-md w-[90%] mx-auto md:w-[100%] py-2">Next</button>
+          className="w-[90%] mx-auto md:w-auto py-3 px-20 md:px-24 rounded-md font-medium bg-[#197686] hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">Next</button>
         </div>
       </div>
     </div>

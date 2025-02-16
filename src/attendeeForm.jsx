@@ -11,6 +11,12 @@ const AttendeeForm = () => {
     avatarUrl: '',
     specialRequest: ''
   });
+  
+
+
+  const handleCancel = () => {
+    navigate(-1);
+  }
 
   const [isUploading, setIsUploading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -155,10 +161,10 @@ const AttendeeForm = () => {
                 
                 <input
                   type="file"
-                  id="avatar"
-                  name="avatar"
+                   id="avatar"
+                   name="avatar"
                   onChange={(e) => handleImageUpload(e.target.files[0])}
-                  accept="image/jpeg,image/png,image/gif"
+                    accept="image/jpeg,image/png,image/gif"
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   aria-describedby="avatarError"
                   disabled={isUploading}
@@ -241,7 +247,8 @@ const AttendeeForm = () => {
             </div>
           </div>
           <div className='flex flex-col md:flex-row gap-4 md:gap-0 justify-around my-3'>
-  <button className="w-full md:w-auto py-3 px-16 rounded-md border border-solid border-[#197686]">
+  <button 
+  onClick={handleCancel} className="w-full md:w-auto py-3 px-16 rounded-md border border-solid border-[#197686]">
     Cancel
   </button>
   <button

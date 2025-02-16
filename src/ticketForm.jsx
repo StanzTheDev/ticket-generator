@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 const TicketForm = () => {
   const location = useLocation();
   const {
@@ -10,7 +10,11 @@ const TicketForm = () => {
     specialRequest,
     numOfTickets
   } = location.state;
-
+const navigate = useNavigate();
+const handleBook = () => {
+    localStorage.removeItem('ticketFormData');
+    navigate('/');
+}
   return (
     <div className='flex justify-center mt-5'>
       <div class="w-[700px] h-[1025px] p-12 bg-[#041e22] rounded-3xl border border-[#0e464f] flex-col justify-center items-center gap-8 inline-flex">
@@ -292,7 +296,8 @@ const TicketForm = () => {
             </div>
             <div class="self-stretch h-12 justify-end items-end gap-6 inline-flex">
                 <div class="grow shrink basis-0 h-12 px-6 py-3 rounded-lg border border-[#23a0b5] justify-center items-center gap-2 flex overflow-hidden">
-                    <div class="text-[#23a0b5] text-base font-normal font-['JejuMyeongjo'] leading-normal">Book Another Ticket</div>
+                    <div class="text-[#23a0b5] text-base font-normal font-['JejuMyeongjo'] leading-normal"
+                    onClick={handleBook}>Book Another Ticket</div>
                 </div>
                 <div class="grow shrink basis-0 h-12 px-6 py-3 bg-[#23a0b5] rounded-lg justify-center items-center gap-2 flex overflow-hidden">
                     <div class="text-neutral-50 text-base font-normal font-['JejuMyeongjo'] leading-normal">Download Ticket</div>
